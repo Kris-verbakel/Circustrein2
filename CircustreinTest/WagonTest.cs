@@ -12,10 +12,11 @@ namespace CircustreinTest
         {
             //Arrange
             Animal animal = new Animal(Food.herbivore, Size.medium, "Koe");
-            Wagon wagon = new Wagon();
+            Animal animal2 = new Animal(Food.herbivore, Size.small, " Konijn"); 
+            Wagon wagon = new Wagon(animal);
 
             //Act
-            bool result = wagon.AddAnimal(animal);
+            bool result = wagon.AddAnimal(animal2);
 
             //Assert
             Assert.IsTrue(result);
@@ -29,9 +30,7 @@ namespace CircustreinTest
             Animal animal2 = new Animal(Food.herbivore, Size.big, "Olifant");
             Animal animal3 = new Animal(Food.herbivore, Size.medium, "Paard");
 
-            Wagon wagon = new Wagon();
-
-            wagon.AddAnimal(animal1);
+            Wagon wagon = new Wagon(animal1);
             wagon.AddAnimal(animal2);
 
             //Act
@@ -48,9 +47,7 @@ namespace CircustreinTest
             Animal animal1 = new Animal(Food.carnivore, Size.big, "Beer");
             Animal animal2 = new Animal(Food.herbivore, Size.medium, "Koe");
 
-            Wagon wagon = new Wagon();
-
-            wagon.AddAnimal(animal1);
+            Wagon wagon = new Wagon(animal1);
 
             //Act
             bool result = wagon.AddAnimal(animal2);
@@ -67,9 +64,7 @@ namespace CircustreinTest
             Animal animal2 = new Animal(Food.herbivore, Size.small, "Kip");
             Animal animal3 = new Animal(Food.carnivore, Size.medium, "Vos");
 
-            Wagon wagon = new Wagon();
-
-            wagon.AddAnimal(animal1);
+            Wagon wagon = new Wagon(animal1);
             wagon.AddAnimal(animal2);
 
             //Act
@@ -87,9 +82,7 @@ namespace CircustreinTest
             Animal animal2 = new Animal(Food.herbivore, Size.big, "Olifant");
             Animal animal3 = new Animal(Food.herbivore, Size.medium, "Hert");
 
-            Wagon wagon = new Wagon();
-
-            wagon.AddAnimal(animal1);
+            Wagon wagon = new Wagon(animal1);
             wagon.AddAnimal(animal2);
 
             //Act
